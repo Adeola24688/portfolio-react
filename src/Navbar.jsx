@@ -39,6 +39,9 @@ const Navbar = () => {
         <li onClick={() => handleMenuClick('contact')}>
           <a href="#contact" className={menu === 'contact' ? 'active' : ''}>Contact</a>
         </li>
+        <li>
+          <a href="https://github.com/Adeola24688" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
       </ul>
 
       <div className="nav-actions">

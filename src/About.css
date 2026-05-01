@@ -1,7 +1,7 @@
 .about {
   width: 100vw;
-  padding: 80px 0;
-  background: #0a0a0a;
+  padding: 100px 40px;
+  background: transparent;
 }
 
 .about-title {
@@ -123,15 +123,24 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .about {
+    padding: 80px 30px;
+  }
+
   .about-content {
     flex-direction: column;
     gap: 40px;
     align-items: center;
   }
 
+  .about-title {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+  }
+
   .about-img {
-    width: 250px;
-    height: 350px;
+    width: 260px;
+    height: 360px;
   }
 
   .about-text {
@@ -168,11 +177,12 @@
   }
 
   .about-text p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .skill-name {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .about-stats {
@@ -190,25 +200,49 @@
 }
 
 @media (max-width: 480px) {
+  .about {
+    padding: 50px 15px;
+  }
+
   .about-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 35px;
   }
 
   .about-img {
     width: 150px;
     height: 210px;
+    margin-bottom: 25px;
   }
 
   .about-text p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .skills {
+    margin: 20px 0;
+  }
+
+  .skill-name {
+    font-size: 0.8rem;
   }
 
   .about-stats {
     flex-direction: column;
     gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .stat {
+    text-align: center;
   }
 
   .stat h3 {
     font-size: 1.8rem;
+  }
+
+  .stat p {
+    font-size: 0.8rem;
   }
 }
