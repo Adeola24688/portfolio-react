@@ -86,6 +86,32 @@
   cursor: pointer;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.18s ease;
+}
+.github-link svg {
+  display: block;
+}
+.github-link:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .navbar {

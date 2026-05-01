@@ -41,6 +41,7 @@ const Footer = () => {
         <div className="footer-links">
           <a href="#terms">Term of Services</a>
           <a href="#privacy">Privacy Policy</a>
+          <a href="https://github.com/Adeola24688" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#connect">Connect with me</a>
         </div>
       </div>
