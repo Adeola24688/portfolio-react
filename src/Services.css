@@ -1,0 +1,218 @@
+.services {
+  width: 100vw;
+  padding: 80px 0 120px 0;
+  background:
+    radial-gradient(
+      1000px 400px at 50% 10%,
+      rgba(20, 30, 60, 0.65),
+      rgba(10, 10, 10, 1) 40%
+    ),
+    #070710;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  font-weight: 600;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.services-subtitle {
+  text-align: center;
+  color: #bfbfbf;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  font-size: 1.05rem;
+}
+
+/* services grid (three columns desktop) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 28px;
+  border-radius: 10px;
+  min-height: 220px;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(11, 14, 28, 0.6);
+}
+
+.service-number {
+  color: #7c3aed;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.service-title {
+  color: #7c3aed;
+  font-size: 1.05rem;
+  margin: 6px 0 12px 0;
+  font-weight: 700;
+}
+.service-desc {
+  color: #bfbfbf;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.read-more .arrow {
+  margin-left: 8px;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  align-items: center;
+}
+
+.stack-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 34px;
+  border-radius: 16px;
+  background: rgba(18, 24, 38, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  min-height: 150px;
+  overflow: visible;
+  transition:
+    transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 0.28s ease;
+}
+
+.stack-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow:
+    0 18px 40px rgba(12, 18, 40, 0.6),
+    0 6px 30px rgba(147, 51, 234, 0.08);
+  border-color: rgba(147, 51, 234, 0.22);
+}
+
+.stack-card::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 8px;
+  height: 14px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(233, 80, 162, 0.12),
+    rgba(147, 51, 234, 0.12),
+    rgba(249, 115, 22, 0.12)
+  );
+  filter: blur(10px);
+  opacity: 0.9;
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+  pointer-events: none;
+}
+
+.stack-card:hover::after {
+  transform: translateY(2px) scaleX(1.02);
+  opacity: 1;
+}
+
+.stack-logo-wrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack-logo-wrap svg {
+  width: 64px;
+  height: 64px;
+}
+
+.stack-label {
+  margin-top: 12px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .stack-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+  }
+}
+
+@media (max-width: 820px) {
+  .services {
+    padding: 60px 18px 80px 18px;
+  }
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 720px;
+  }
+  .stack-card {
+    min-height: 130px;
+    padding: 22px;
+  }
+  .stack-logo-wrap {
+    width: 64px;
+    height: 64px;
+  }
+  .stack-logo-wrap svg {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 40px 12px;
+  }
+  .stack-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0;
+  }
+  .stack-card {
+    padding: 18px;
+    min-height: 120px;
+  }
+}

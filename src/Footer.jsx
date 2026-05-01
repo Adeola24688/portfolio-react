@@ -1,0 +1,51 @@
+import React, { useState } from 'react'
+import './Footer.css'
+
+const Footer = () => {
+  const [email, setEmail] = useState('')
+
+  const handleSubscribe = (e) => {
+    e.preventDefault()
+    console.log('Subscribed with email:', email)
+    setEmail('')
+  }
+
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-left">
+          <h3 className="footer-logo">Abdullahi</h3>
+          <p className="footer-description">
+            I am a frontend developer from Nigeria with 2 years of experience in building responsive and user-friendly web applications. I specialize in React and have a passion for creating beautiful and functional user interfaces.
+          </p>
+        </div>
+
+        <div className="footer-right">
+          <form className="newsletter-form" onSubmit={handleSubscribe}>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit" className="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr className="footer-divider" />
+
+      <div className="footer-bottom">
+        <p className="copyright">© 2026 Shefiu Abdullahi. All rights reserved.</p>
+        <div className="footer-links">
+          <a href="#terms">Term of Services</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#connect">Connect with me</a>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

@@ -1,0 +1,244 @@
+.contact {
+  width: 100vw;
+  padding: 80px 0;
+  background: #0a0a0a;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  font-weight: 600;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contact-left h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-left p {
+  color: #b3b3b3;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-item img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.info-item p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 15px 20px;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #9333ea;
+  background: #333333;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  padding: 14px 32px;
+  background: linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+  width: fit-content;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-message {
+  padding: 12px 20px;
+  background: rgba(147, 51, 234, 0.1);
+  border: 1px solid #9333ea;
+  border-radius: 8px;
+  color: #b3b3b3;
+  text-align: center;
+  font-size: 0.95rem;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-container {
+    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 0;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+  }
+
+  .contact-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-left p {
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact-title {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+  }
+
+  .contact-left h2 {
+    font-size: 1.3rem;
+  }
+
+  .contact-info {
+    gap: 20px;
+  }
+
+  .info-item {
+    gap: 15px;
+  }
+
+  .info-item img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+}
