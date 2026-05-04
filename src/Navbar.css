@@ -14,8 +14,8 @@
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: #fff;
   cursor: pointer;
   background: linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%);
@@ -40,8 +40,8 @@
 .nav-menu a {
   text-decoration: none;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -66,16 +66,16 @@
 }
 
 .nav-connect {
-  padding: 10px 24px;
+  padding: 12px 28px;
   background: linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%);
   color: #fff;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-heading);
   box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
 }
 
@@ -126,7 +126,7 @@
   }
 
   .logo {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     white-space: nowrap;
   }
 
@@ -163,7 +163,7 @@
   }
 
   .nav-menu a {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .nav-actions {
@@ -183,7 +183,7 @@
   }
 
   .logo {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 
   .nav-actions {

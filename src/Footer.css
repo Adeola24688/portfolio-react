@@ -21,20 +21,20 @@
 }
 
 .footer-logo {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: #fff;
   margin-bottom: 20px;
   background: linear-gradient(135deg, #9d4edd 0%, #c77dff 50%, #3a86ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 
 .footer-description {
   color: #b3b3b3;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   max-width: 400px;
 }
@@ -57,8 +57,8 @@
   border-radius: 50px;
   padding: 14px 25px;
   color: #fff;
-  font-family: "Outfit", sans-serif;
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
   width: 280px;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   backdrop-filter: blur(10px);
@@ -83,8 +83,8 @@
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.95rem;
-  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-family: var(--font-heading);
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: 0 8px 24px rgba(157, 78, 221, 0.3);
   white-space: nowrap;
@@ -114,7 +114,7 @@
 
 .copyright {
   color: #888;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .footer-links {
@@ -125,7 +125,7 @@
 .footer-links a {
   color: #b3b3b3;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
@@ -164,12 +164,12 @@
   }
 
   .footer-logo {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin-bottom: 15px;
   }
 
   .footer-description {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
   }
 
   .footer-right {
@@ -207,7 +207,7 @@
 
   .copyright {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
   }
 
   .footer-links {
@@ -217,7 +217,7 @@
   }
 
   .footer-links a {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
 }
 
@@ -231,12 +231,12 @@
   }
 
   .footer-logo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 12px;
   }
 
   .footer-description {
-    font-size: 0.8rem;
+    font-size: 0.92rem;
     line-height: 1.6;
   }
 
@@ -252,7 +252,7 @@
   }
 
   .subscribe-btn {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .footer-divider {
@@ -266,7 +266,7 @@
 
   .copyright {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.86rem;
   }
 
   .footer-links {
@@ -276,6 +276,6 @@
   }
 
   .footer-links a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }

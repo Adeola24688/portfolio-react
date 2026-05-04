@@ -6,9 +6,10 @@
 
 .about-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-size: 3.35rem;
   margin-bottom: 60px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .highlight {
@@ -43,7 +44,7 @@
 
 .about-text p {
   color: #b3b3b3;
-  font-size: 1.05rem;
+  font-size: 1.14rem;
   line-height: 1.8;
   margin-bottom: 25px;
 }
@@ -64,8 +65,8 @@
 
 .skill-name {
   color: #fff;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
 }
 
 .skill-bar {
@@ -100,7 +101,8 @@
 }
 
 .stat h3 {
-  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-size: 3rem;
   background: linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -110,9 +112,9 @@
 
 .stat p {
   color: #b3b3b3;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0;
 }
 
 .divider {
@@ -134,7 +136,7 @@
   }
 
   .about-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 50px;
   }
 
@@ -163,7 +165,7 @@
   }
 
   .about-title {
-    font-size: 2rem;
+    font-size: 2.35rem;
     margin-bottom: 40px;
   }
 
@@ -177,12 +179,12 @@
   }
 
   .about-text p {
-    font-size: 0.95rem;
+    font-size: 1.02rem;
     line-height: 1.7;
   }
 
   .skill-name {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
   }
 
   .about-stats {
@@ -191,11 +193,11 @@
   }
 
   .stat h3 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .stat p {
-    font-size: 0.85rem;
+    font-size: 0.92rem;
   }
 }
 
@@ -205,7 +207,7 @@
   }
 
   .about-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 35px;
   }
 
@@ -216,7 +218,7 @@
   }
 
   .about-text p {
-    font-size: 0.85rem;
+    font-size: 0.96rem;
     line-height: 1.6;
   }
 
@@ -225,7 +227,7 @@
   }
 
   .skill-name {
-    font-size: 0.8rem;
+    font-size: 0.92rem;
   }
 
   .about-stats {
@@ -239,10 +241,10 @@
   }
 
   .stat h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .stat p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
