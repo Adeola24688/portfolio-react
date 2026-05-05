@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Contact.css'
 import mail_icon from './assets/mail_icon.svg'
 import call_icon from './assets/call_icon.svg'
@@ -10,7 +10,7 @@ const Contact = () => {
     email: '',
     message: ''
   })
-  const [message, setMessage] = useState('')
+  const [result, setResult] = useState('')
 
 
   const handleChange = (e) => {
@@ -21,13 +21,25 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Form submission captured locally. Integrate your preferred email service here.
-    console.log('Form submitted:', formData)
-    setMessage('Message captured. Integrate your chosen email provider to send emails.')
-    setFormData({ name: '', email: '', message: '' })
-    setTimeout(() => setMessage(''), 3000)
+  const onSubmit = async (event) => {
+    event.preventDefault()
+    setResult('Sending....')
+    const formData = new FormData(event.target)
+    formData.append('access_key', 'b0f3b0a1-2366-4e46-ab50-88099678c83b')
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+
+    const data = await response.json()
+    if (data.success) {
+      setResult('Form Submitted Successfully')
+      event.target.reset()
+      setFormData({ name: '', email: '', message: '' })
+    } else {
+      setResult('Error')
+    }
   }
 
   return (
@@ -57,7 +69,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={onSubmit}>
           <div className="form-group">
             <label>Your Name</label>
             <input
@@ -94,7 +106,7 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          {message && <div className="form-message">{message}</div>}
+          {result && <div className="form-message">{result}</div>}
 
           <button type="submit" className="submit-btn">
             Submit now

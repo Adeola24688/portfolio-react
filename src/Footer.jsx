@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Footer.css'
 
 const Footer = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
           <a href="#terms">Term of Services</a>
           <a href="#privacy">Privacy Policy</a>
           <a href="https://github.com/Adeola24688" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="#connect">Connect with me</a>
+          <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }) }}>Connect with me</a>
         </div>
       </div>
     </footer>

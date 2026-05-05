@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.css'
 import Navbar from './Navbar'
 import About from './About'
@@ -9,6 +8,10 @@ import Footer from './Footer'
 import hero_img from './assets/profile_photo.jpeg'
 
 const App = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div className="app">
       <Navbar />
@@ -22,7 +25,7 @@ const App = () => {
             I am a frontend developer from Nigeria with 2 years of experience in building responsive and user-friendly web applications. I specialize in React and have a passion for creating beautiful and functional user interfaces.
           </p>
           <div className="hero-buttons">
-            <button className="btn btn-primary">Connect with me</button>
+            <button type="button" className="btn btn-primary" onClick={scrollToContact}>Connect with me</button>
             <button className="btn btn-secondary">My resume</button>
           </div>
         </div>
