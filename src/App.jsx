@@ -19,10 +19,11 @@ const App = () => {
         <div className="hero-content">
           <img src={hero_img} alt="profile" className="hero-img" />
           <h1 className="hero-title">
-            I'm <span className="gradient-text">Shefiu Abdullahi</span>, frontend developer based in Nigeria.
+            <span className="hero-name-line">I'm <span className="gradient-text">Shefiu Abdullahi</span>,</span>
+            <span className="hero-role-line">full-stack web developer based in Nigeria.</span>
           </h1>
           <p className="hero-description">
-            I am a frontend developer from Nigeria with 2 years of experience in building responsive and user-friendly web applications. I specialize in React and have a passion for creating beautiful and functional user interfaces.
+            I build responsive web applications with React, Next JS, JavaScript, PHP, and MySQL. I enjoy turning clean interfaces into functional, database-powered experiences that are easy to use.
           </p>
           <div className="hero-buttons">
             <button type="button" className="btn btn-primary" onClick={scrollToContact}>Connect with me</button>

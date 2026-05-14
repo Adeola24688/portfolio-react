@@ -84,17 +84,6 @@
   line-height: 1.7;
   font-size: 1.02rem;
 }
-.read-more {
-  display: inline-block;
-  margin-top: 14px;
-  color: #fff;
-  font-weight: 700;
-  font-family: var(--font-heading);
-  text-decoration: none;
-}
-.read-more .arrow {
-  margin-left: 8px;
-}
 
 .stack-grid {
   display: grid;

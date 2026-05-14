@@ -113,6 +113,11 @@ body {
   letter-spacing: 0;
 }
 
+.hero-name-line,
+.hero-role-line {
+  display: block;
+}
+
 .gradient-text {
   background: linear-gradient(90deg, #9d4edd 0%, #c77dff 50%, #3a86ff 100%);
   -webkit-background-clip: text;

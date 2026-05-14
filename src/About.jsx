@@ -3,10 +3,12 @@ import about_img from './assets/profile_photo.jpeg'
 
 const About = () => {
   const skills = [
-    { name: 'HTML & CSS', percentage: 95 },
-    { name: 'React JS', percentage: 100 },
-    { name: 'JavaScript', percentage: 90 },
-    { name: 'Next JS', percentage: 85 }
+    { name: 'HTML & CSS', desc: 'Responsive layouts, clean styling, and polished page structure.' },
+    { name: 'React JS', desc: 'Reusable components and interactive user interfaces.' },
+    { name: 'JavaScript', desc: 'Dynamic features, browser logic, and smooth user experiences.' },
+    { name: 'Next JS', desc: 'Modern React websites with routing and production-ready structure.' },
+    { name: 'PHP', desc: 'Backend logic, form handling, and server-side website features.' },
+    { name: 'MySQL Database', desc: 'Database design, queries, and data-driven application features.' }
   ]
 
   return (
@@ -18,28 +20,22 @@ const About = () => {
 
         <div className="about-text">
           <p>
-            I am a frontend developer from Nigeria with 2 years of professional experience in building responsive and user-friendly web applications. Throughout my journey, I have had the opportunity to work on diverse projects that strengthened my skills and passion for frontend development.
+            I am a full-stack web developer from Nigeria with 2 years of professional experience building responsive, user-friendly web applications. Throughout my journey, I have worked on diverse projects that strengthened my skills across frontend interfaces, backend logic, and database-driven features.
           </p>
           <p>
-            My expertise in React and modern web technologies is reflected in my dedication to creating beautiful and functional user interfaces. I bring enthusiasm and attention to detail to every project I work on.
+            My expertise includes React, Next JS, JavaScript, PHP, and MySQL, giving me the ability to create polished user interfaces and connect them to reliable server-side functionality. I bring enthusiasm and attention to detail to every project I work on.
           </p>
-
-          <div className="skills">
-            {skills.map((skill, index) => (
-              <div key={index} className="skill-item">
-                <div className="skill-header">
-                  <span className="skill-name">{skill.name}</span>
-                </div>
-                <div className="skill-bar">
-                  <div 
-                    className="skill-fill" 
-                    style={{ width: `${skill.percentage}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
+      </div>
+
+      <div className="skills">
+        {skills.map((skill, index) => (
+          <div key={index} className="skill-item">
+            <div className="skill-number">{String(index + 1).padStart(2, '0')}</div>
+            <h3 className="skill-name">{skill.name}</h3>
+            <p className="skill-desc">{skill.desc}</p>
+          </div>
+        ))}
       </div>
 
       <div className="about-stats">

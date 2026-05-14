@@ -2,12 +2,12 @@ import './Services.css'
 
 const Services = () => {
   const items = [
-    { id: 1, number: '01', title: 'Web design', desc: 'Web development is the process of building, programming...'},
-    { id: 2, number: '02', title: 'Graphics design', desc: 'Web development is the process of building, programming...'},
-    { id: 3, number: '03', title: 'Social media', desc: 'Web development is the process of building, programming...'},
-    { id: 4, number: '04', title: 'App design', desc: 'Web development is the process of building, programming...'},
-    { id: 5, number: '05', title: 'Digital marketing', desc: 'Web development is the process of building, programming...'},
-    { id: 6, number: '06', title: 'Content writing', desc: 'Web development is the process of building, programming...'}
+    { id: 1, number: '01', title: 'Frontend Development', desc: 'Responsive interfaces built with HTML, CSS, JavaScript, React, and Next JS.'},
+    { id: 2, number: '02', title: 'Backend Development', desc: 'Server-side features, form handling, and application logic built with PHP.'},
+    { id: 3, number: '03', title: 'MySQL Databases', desc: 'Database design, queries, and data management for dynamic web applications.'},
+    { id: 4, number: '04', title: 'Full-Stack Websites', desc: 'Complete web applications that connect modern frontend experiences to backend systems.'},
+    { id: 5, number: '05', title: 'Portfolio Websites', desc: 'Clean personal and business websites designed to present work, skills, and services clearly.'},
+    { id: 6, number: '06', title: 'Website Maintenance', desc: 'Updates, bug fixes, performance improvements, and ongoing support for existing websites.'}
   ]
 
   return (
@@ -20,7 +20,6 @@ const Services = () => {
             <div className="service-number">{s.number}</div>
             <h3 className="service-title">{s.title}</h3>
             <p className="service-desc">{s.desc}</p>
-            <a className="read-more" href="#">Read More <span className="arrow">→</span></a>
           </article>
         ))}
       </div>
