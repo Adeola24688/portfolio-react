@@ -2,7 +2,7 @@ const Services_Data = [
     {
         s_no:"01",
         s_name:"Frontend Development",
-        s_desc:"Responsive interfaces built with HTML, CSS, JavaScript, React, Next JS, and Angular."
+        s_desc:"Responsive interfaces built with HTML, CSS, JavaScript, TypeScript, React, Next JS, and Angular."
     },
     {
         s_no:"02",

@@ -2,7 +2,7 @@ import './Services.css'
 
 const Services = () => {
   const items = [
-    { id: 1, number: '01', title: 'Frontend Development', desc: 'Responsive interfaces built with HTML, CSS, JavaScript, React, Next JS, and Angular.'},
+    { id: 1, number: '01', title: 'Frontend Development', desc: 'Responsive interfaces built with HTML, CSS, JavaScript, TypeScript, React, Next JS, and Angular.'},
     { id: 2, number: '02', title: 'Backend Development', desc: 'Server-side features, RESTful APIs, and logic built with PHP and ASP.NET Core (C#).'},
     { id: 3, number: '03', title: 'Database Management', desc: 'Database design, queries, and integration using MySQL and PostgreSQL.'},
     { id: 4, number: '04', title: 'Full-Stack Websites', desc: 'Complete web applications that connect modern frontend experiences to backend systems.'},
