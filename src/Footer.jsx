@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="footer-left">
           <h3 className="footer-logo">Abdullahi</h3>
           <p className="footer-description">
-            I am a full-stack web developer from Nigeria with 2 years of experience building responsive applications using React, Next JS, PHP, and MySQL.
+            I am a full-stack web developer from Nigeria with 2 years of experience building responsive applications using Angular, React, Next JS, TypeScript, PHP, ASP.NET Core (C#), and PostgreSQL/MySQL.
           </p>
         </div>
 

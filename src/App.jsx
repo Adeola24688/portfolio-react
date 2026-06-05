@@ -23,7 +23,7 @@ const App = () => {
             <span className="hero-role-line">full-stack web developer based in Nigeria.</span>
           </h1>
           <p className="hero-description">
-            I build responsive web applications with React, Next JS, JavaScript, PHP, and MySQL. I enjoy turning clean interfaces into functional, database-powered experiences that are easy to use.
+            I build responsive web applications with Angular, React, Next JS, TypeScript, PHP, ASP.NET Core (C#), and PostgreSQL/MySQL. I enjoy turning clean interfaces into functional, database-powered experiences that are easy to use.
           </p>
           <div className="hero-buttons">
             <button type="button" className="btn btn-primary" onClick={scrollToContact}>Connect with me</button>

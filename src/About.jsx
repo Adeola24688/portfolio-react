@@ -5,10 +5,13 @@ const About = () => {
   const skills = [
     { name: 'HTML & CSS', desc: 'Responsive layouts, clean styling, and polished page structure.' },
     { name: 'React JS', desc: 'Reusable components and interactive user interfaces.' },
-    { name: 'JavaScript', desc: 'Dynamic features, browser logic, and smooth user experiences.' },
+    { name: 'JavaScript & TypeScript', desc: 'Dynamic logic, type-safe development, and modern features for robust applications.' },
     { name: 'Next JS', desc: 'Modern React websites with routing and production-ready structure.' },
     { name: 'PHP', desc: 'Backend logic, form handling, and server-side website features.' },
-    { name: 'MySQL Database', desc: 'Database design, queries, and data-driven application features.' }
+    { name: 'MySQL Database', desc: 'Database design, queries, and data-driven application features.' },
+    { name: 'Angular', desc: 'Component-based frontend application structures and routing with TypeScript.' },
+    { name: 'ASP.NET Core', desc: 'Developing secure, high-performance RESTful APIs using C#.' },
+    { name: 'PostgreSQL', desc: 'Relational database design, integration, and data management.' }
   ]
 
   return (
@@ -23,7 +26,7 @@ const About = () => {
             I am a full-stack web developer from Nigeria with 2 years of professional experience building responsive, user-friendly web applications. Throughout my journey, I have worked on diverse projects that strengthened my skills across frontend interfaces, backend logic, and database-driven features.
           </p>
           <p>
-            My expertise includes React, Next JS, JavaScript, PHP, and MySQL, giving me the ability to create polished user interfaces and connect them to reliable server-side functionality. I bring enthusiasm and attention to detail to every project I work on.
+            My expertise includes Angular, React, Next JS, TypeScript, PHP, ASP.NET Core (C#), and PostgreSQL/MySQL, giving me the ability to create polished user interfaces and connect them to robust backend systems. I bring enthusiasm and attention to detail to every project I work on.
           </p>
         </div>
       </div>

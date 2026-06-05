@@ -2,17 +2,17 @@ const Services_Data = [
     {
         s_no:"01",
         s_name:"Frontend Development",
-        s_desc:"Responsive interfaces built with HTML, CSS, JavaScript, React, and Next JS."
+        s_desc:"Responsive interfaces built with HTML, CSS, JavaScript, React, Next JS, and Angular."
     },
     {
         s_no:"02",
         s_name:"Backend Development",
-        s_desc:"Server-side features, form handling, and application logic built with PHP."
+        s_desc:"Server-side features, RESTful APIs, and logic built with PHP and ASP.NET Core (C#)."
     },
     {
         s_no:"03",
-        s_name:"MySQL Databases",
-        s_desc:"Database design, queries, and data management for dynamic web applications."
+        s_name:"Database Management",
+        s_desc:"Database design, queries, and integration using MySQL and PostgreSQL."
     },
     {
         s_no:"04",
