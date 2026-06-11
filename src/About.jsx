@@ -1,7 +1,13 @@
 import './About.css'
 import about_img from './assets/profile_photo.jpeg'
+import useScrollReveal from './hooks/useScrollReveal'
 
 const About = () => {
+  const titleReveal = useScrollReveal()
+  const contentReveal = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
+  const skillsReveal = useScrollReveal({ threshold: 0.1 })
+  const statsReveal = useScrollReveal()
+
   const skills = [
     { name: 'HTML & CSS', desc: 'Responsive layouts, clean styling, and polished page structure.' },
     { name: 'React JS', desc: 'Reusable components and interactive user interfaces.' },
@@ -16,9 +22,17 @@ const About = () => {
 
   return (
     <section className="about" id="about">
-      <h1 className="about-title">About <span className="highlight">me</span></h1>
+      <h1
+        ref={titleReveal.ref}
+        className={`about-title scroll-reveal ${titleReveal.isVisible ? 'revealed' : ''}`}
+      >
+        About <span className="highlight">me</span>
+      </h1>
 
-      <div className="about-content">
+      <div
+        ref={contentReveal.ref}
+        className={`about-content scroll-reveal ${contentReveal.isVisible ? 'revealed' : ''}`}
+      >
         <img src={about_img} alt="about" className="about-img" />
 
         <div className="about-text">
@@ -31,9 +45,12 @@ const About = () => {
         </div>
       </div>
 
-      <div className="skills">
+      <div
+        ref={skillsReveal.ref}
+        className={`skills stagger-children ${skillsReveal.isVisible ? 'revealed' : ''}`}
+      >
         {skills.map((skill, index) => (
-          <div key={index} className="skill-item">
+          <div key={index} className="skill-item scroll-reveal-child">
             <div className="skill-number">{String(index + 1).padStart(2, '0')}</div>
             <h3 className="skill-name">{skill.name}</h3>
             <p className="skill-desc">{skill.desc}</p>
@@ -41,7 +58,10 @@ const About = () => {
         ))}
       </div>
 
-      <div className="about-stats">
+      <div
+        ref={statsReveal.ref}
+        className={`about-stats scroll-reveal-scale ${statsReveal.isVisible ? 'revealed' : ''}`}
+      >
         <div className="stat">
           <h3>2+</h3>
           <p>YEARS OF EXPERIENCE</p>

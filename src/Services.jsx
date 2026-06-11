@@ -1,6 +1,10 @@
 import './Services.css'
+import useScrollReveal from './hooks/useScrollReveal'
 
 const Services = () => {
+  const titleReveal = useScrollReveal()
+  const gridReveal = useScrollReveal({ threshold: 0.1 })
+
   const items = [
     { id: 1, number: '01', title: 'Frontend Development', desc: 'Responsive interfaces built with HTML, CSS, JavaScript, TypeScript, React, Next JS, and Angular.'},
     { id: 2, number: '02', title: 'Backend Development', desc: 'Server-side features, RESTful APIs, and logic built with PHP and ASP.NET Core (C#).'},
@@ -12,11 +16,19 @@ const Services = () => {
 
   return (
     <section className="services" id="services">
-      <h1 className="services-title">My <span className="highlight">Services</span></h1>
+      <h1
+        ref={titleReveal.ref}
+        className={`services-title scroll-reveal ${titleReveal.isVisible ? 'revealed' : ''}`}
+      >
+        My <span className="highlight">Services</span>
+      </h1>
 
-      <div className="services-grid">
+      <div
+        ref={gridReveal.ref}
+        className={`services-grid stagger-children ${gridReveal.isVisible ? 'revealed' : ''}`}
+      >
         {items.map((s) => (
-          <article key={s.id} className="service-card">
+          <article key={s.id} className="service-card scroll-reveal-child">
             <div className="service-number">{s.number}</div>
             <h3 className="service-title">{s.title}</h3>
             <p className="service-desc">{s.desc}</p>

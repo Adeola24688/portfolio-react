@@ -5,6 +5,7 @@ import Services from './Services'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
 import Footer from './Footer'
+import BackToTop from './BackToTop'
 import hero_img from './assets/profile_photo.jpeg'
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
           </p>
           <div className="hero-buttons">
             <button type="button" className="btn btn-primary" onClick={scrollToContact}>Connect with me</button>
-            <button className="btn btn-secondary">My resume</button>
+            <button className="btn btn-secondary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>My resume</button>
           </div>
         </div>
       </section>
@@ -36,6 +37,7 @@ const App = () => {
       <Portfolio />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   )
 }

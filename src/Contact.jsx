@@ -3,6 +3,7 @@ import './Contact.css'
 import mail_icon from './assets/mail_icon.svg'
 import call_icon from './assets/call_icon.svg'
 import location_icon from './assets/location_icon.svg'
+import useScrollReveal from './hooks/useScrollReveal'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,9 @@ const Contact = () => {
   })
   const [result, setResult] = useState('')
 
+  const titleReveal = useScrollReveal()
+  const leftReveal = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
+  const formReveal = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -44,10 +48,18 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact">
-      <h1 className="contact-title">Get in <span className="highlight">touch</span></h1>
+      <h1
+        ref={titleReveal.ref}
+        className={`contact-title scroll-reveal ${titleReveal.isVisible ? 'revealed' : ''}`}
+      >
+        Get in <span className="highlight">touch</span>
+      </h1>
 
       <div className="contact-container">
-        <div className="contact-left">
+        <div
+          ref={leftReveal.ref}
+          className={`contact-left scroll-reveal-left ${leftReveal.isVisible ? 'revealed' : ''}`}
+        >
           <h2>Let's <span className="gradient-text">talk</span></h2>
           <p>
             I'm currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact me anytime.
@@ -69,7 +81,11 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={onSubmit}>
+        <form
+          ref={formReveal.ref}
+          className={`contact-form scroll-reveal-right ${formReveal.isVisible ? 'revealed' : ''}`}
+          onSubmit={onSubmit}
+        >
           <div className="form-group">
             <label>Your Name</label>
             <input
