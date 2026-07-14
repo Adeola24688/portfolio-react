@@ -10,10 +10,27 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(129, 140, 248, 0.16),
+      transparent 24%
+    ),
+    linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
   background-attachment: fixed;
-  color: #fff;
+  color: #f8fafc;
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-size: 17px;
@@ -27,17 +44,19 @@ body {
 }
 
 :root {
-  --primary: #9d4edd;
-  --primary-light: #c77dff;
-  --secondary: #3a86ff;
-  --accent: #fb5607;
-  --dark-bg: #0f0c29;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --text-primary: #ffffff;
-  --text-secondary: #b8b8b8;
+  --primary: #38bdf8;
+  --primary-light: #7dd3fc;
+  --secondary: #818cf8;
+  --accent: #34d399;
+  --dark-bg: #020617;
+  --card-bg: rgba(15, 23, 42, 0.72);
+  --border-color: rgba(148, 163, 184, 0.18);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
   --font-heading: "Sora", "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 h1,
@@ -94,8 +113,9 @@ span {
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
-              transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .scroll-reveal.revealed {
@@ -106,8 +126,9 @@ span {
 .scroll-reveal-left {
   opacity: 0;
   transform: translateX(-50px);
-  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
-              transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .scroll-reveal-left.revealed {
@@ -118,8 +139,9 @@ span {
 .scroll-reveal-right {
   opacity: 0;
   transform: translateX(50px);
-  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
-              transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .scroll-reveal-right.revealed {
@@ -130,8 +152,9 @@ span {
 .scroll-reveal-scale {
   opacity: 0;
   transform: scale(0.92);
-  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-              transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .scroll-reveal-scale.revealed {
@@ -143,8 +166,9 @@ span {
 .stagger-children .scroll-reveal-child {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-              transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .stagger-children.revealed .scroll-reveal-child {
@@ -152,13 +176,30 @@ span {
   transform: translateY(0);
 }
 
-.stagger-children.revealed .scroll-reveal-child:nth-child(1) { transition-delay: 0.05s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(2) { transition-delay: 0.1s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(3) { transition-delay: 0.15s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(4) { transition-delay: 0.2s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(5) { transition-delay: 0.25s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(6) { transition-delay: 0.3s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(7) { transition-delay: 0.35s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(8) { transition-delay: 0.4s; }
-.stagger-children.revealed .scroll-reveal-child:nth-child(9) { transition-delay: 0.45s; }
-
+.stagger-children.revealed .scroll-reveal-child:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(6) {
+  transition-delay: 0.3s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(7) {
+  transition-delay: 0.35s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(8) {
+  transition-delay: 0.4s;
+}
+.stagger-children.revealed .scroll-reveal-child:nth-child(9) {
+  transition-delay: 0.45s;
+}
