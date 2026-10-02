@@ -10,12 +10,26 @@ const Navbar = () => {
   const handleMenuClick = (item) => {
     setMenu(item)
     setMobileMenuOpen(false)
+
+    if (item === 'home') {
+      document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return
+    }
+
+    if (item === 'skills') {
+      document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return
+    }
+
+    if (item === 'contact') {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   const handleConnectClick = () => {
     setMenu('contact')
     setMobileMenuOpen(false)
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (
@@ -45,8 +59,8 @@ const Navbar = () => {
         <li onClick={() => handleMenuClick('contact')}>
           <a href="#contact" className={menu === 'contact' ? 'active' : ''}>Contact</a>
         </li>
-        <li>
-          <a href="https://github.com/Adeola24688" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <li onClick={() => handleMenuClick('skills')}>
+          <a href="#skills" className={menu === 'skills' ? 'active' : ''}>Skills</a>
         </li>
       </ul>
 

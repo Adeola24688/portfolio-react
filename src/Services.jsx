@@ -6,12 +6,12 @@ const Services = () => {
   const gridReveal = useScrollReveal({ threshold: 0.1 })
 
   const items = [
-    { id: 1, number: '01', title: 'Frontend Development', desc: 'Responsive interfaces built with HTML, CSS, JavaScript, TypeScript, React, Next JS, and Angular.'},
-    { id: 2, number: '02', title: 'Backend Development', desc: 'Server-side features, RESTful APIs, and logic built with PHP and ASP.NET Core (C#).'},
-    { id: 3, number: '03', title: 'Database Management', desc: 'Database design, queries, and integration using MySQL and PostgreSQL.'},
-    { id: 4, number: '04', title: 'Full-Stack Websites', desc: 'Complete web applications that connect modern frontend experiences to backend systems.'},
+    { id: 1, number: '01', title: 'Frontend Development', desc: 'Responsive interfaces built with HTML, CSS, JavaScript, TypeScript, React, Next.js, Angular, and Tailwind CSS.'},
+    { id: 2, number: '02', title: 'Backend Development', desc: 'Scalable APIs and server logic using Node.js, Express, and additional experience in PHP and ASP.NET Core.'},
+    { id: 3, number: '03', title: 'Database Management', desc: 'Database design, queries, and integration using MongoDB, MySQL, PostgreSQL, and modern backend patterns.'},
+    { id: 4, number: '04', title: 'Full-Stack Websites', desc: 'Complete web applications that connect modern user interfaces to reliable backend systems.'},
     { id: 5, number: '05', title: 'Portfolio Websites', desc: 'Clean personal and business websites designed to present work, skills, and services clearly.'},
-    { id: 6, number: '06', title: 'Website Maintenance', desc: 'Updates, bug fixes, performance improvements, and ongoing support for existing websites.'}
+    { id: 6, number: '06', title: 'Website Maintenance', desc: 'Updates, fixes, performance improvements, and ongoing support for existing websites.'}
   ]
 
   return (

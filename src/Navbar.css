@@ -6,8 +6,10 @@
   background: rgba(15, 12, 41, 0.7);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -31,6 +33,7 @@
   list-style: none;
   gap: 40px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-menu li {
@@ -125,6 +128,14 @@
     gap: 0 14px;
   }
 
+  .nav-menu {
+    gap: 22px;
+  }
+
+  .nav-menu a {
+    font-size: 0.95rem;
+  }
+
   .logo {
     font-size: 1.7rem;
     white-space: nowrap;
@@ -186,6 +197,10 @@
     font-size: 1.45rem;
   }
 
+  .nav-menu {
+    gap: 14px;
+  }
+
   .nav-actions {
     gap: 8px;
   }
@@ -193,5 +208,28 @@
   .github-link {
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    padding: 12px 10px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.92rem;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .github-link {
+    width: 36px;
+    height: 36px;
   }
 }

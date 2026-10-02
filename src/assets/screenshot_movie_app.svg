@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#1a1f3a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e50914"/>
+      <stop offset="100%" stop-color="#f5a623"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="14"/>
+  
+  <!-- Header with logo -->
+  <g transform="translate(60,50)">
+    <text font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#e50914">MOVIES</text>
+    <rect x="300" y="8" width="120" height="16" rx="8" fill="#cbd5e1" opacity="0.4"/>
+    <rect x="450" y="8" width="100" height="16" rx="8" fill="#cbd5e1" opacity="0.4"/>
+  </g>
+  
+  <!-- Movie card grid -->
+  <g transform="translate(60,140)">
+    <!-- Card 1 -->
+    <rect width="220" height="310" rx="8" fill="#1f2937" opacity="0.8"/>
+    <rect x="10" y="10" width="200" height="240" rx="6" fill="#374151" opacity="0.6"/>
+    <text x="20" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">Featured Movie</text>
+    <text x="20" y="290" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" opacity="0.8">Action • 2024</text>
+    
+    <!-- Card 2 -->
+    <g transform="translate(260,0)">
+      <rect width="220" height="310" rx="8" fill="#1f2937" opacity="0.8"/>
+      <rect x="10" y="10" width="200" height="240" rx="6" fill="#dc2626" opacity="0.7"/>
+      <text x="20" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">Thriller</text>
+      <text x="20" y="290" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" opacity="0.8">Drama • 2024</text>
+    </g>
+    
+    <!-- Card 3 -->
+    <g transform="translate(520,0)">
+      <rect width="220" height="310" rx="8" fill="#1f2937" opacity="0.8"/>
+      <rect x="10" y="10" width="200" height="240" rx="6" fill="#7c3aed" opacity="0.7"/>
+      <text x="20" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">Sci-Fi</text>
+      <text x="20" y="290" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" opacity="0.8">Adventure • 2024</text>
+    </g>
+  </g>
+  
+  <!-- Bottom section with play button -->
+  <g transform="translate(600,500)">
+    <circle cx="0" cy="0" r="45" fill="url(#accentGrad)" opacity="0.9"/>
+    <polygon points="0,-15 35,0 0,15" fill="#0a0e27" transform="translate(-8,0)"/>
+    <text x="80" y="15" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f1f5f9">Start Watching</text>
+  </g>
+  
+  <!-- Info text at bottom -->
+  <g transform="translate(60,620)">
+    <text font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Discover thousands of movies • Stream in HD • TMDB API</text>
+  </g>
+</svg>

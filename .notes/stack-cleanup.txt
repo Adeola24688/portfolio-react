@@ -1,0 +1,2 @@
+Removed blur and glows from stack cards; set edge glows removed and shadows normalized.
+Next: build and confirm with user.

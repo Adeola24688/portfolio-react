@@ -51,7 +51,6 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p className="copyright">© 2026 Shefiu Abdullahi. All rights reserved.</p>
-        <p className="footer-credit">Built with React & passion ✨</p>
       </div>
     </footer>
   )

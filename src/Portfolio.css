@@ -1,20 +1,39 @@
 .portfolio {
-  width: 100vw;
-  padding: 100px 0;
-  background: transparent;
+  width: 100%;
+  padding: 60px 0 80px;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0), rgba(2, 6, 23, 0.18));
 }
 
 .portfolio-title {
+  position: relative;
+  display: block;
   text-align: center;
   font-family: var(--font-heading);
-  font-size: 3.9rem;
-  margin-bottom: 80px;
+  font-size: clamp(2.3rem, 3vw, 4rem);
+  margin: 0 auto 38px;
   font-weight: 800;
-  background: linear-gradient(135deg, #9d4edd 0%, #c77dff 50%, #3a86ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 0;
+  line-height: 1.05;
+  max-width: 1100px;
+  padding: 0 24px;
+  color: #f8fbff;
+  filter: drop-shadow(0 10px 24px rgba(168, 85, 247, 0.12));
+}
+
+.portfolio-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -14px;
+  width: min(220px, 28vw);
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(157, 78, 221, 0.9),
+    rgba(236, 72, 153, 0.85),
+    rgba(249, 115, 22, 0.8)
+  );
 }
 
 .highlight {
@@ -28,26 +47,54 @@
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1200px;
+  gap: 24px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .portfolio-card {
-  border-radius: 16px;
+  position: relative;
+  border-radius: 12px;
   overflow: hidden;
-  background: rgba(15, 12, 41, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 0.35s ease;
   display: flex;
   flex-direction: column;
+  box-shadow:
+    0 10px 30px rgba(2, 6, 23, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  will-change: transform, box-shadow;
+}
+
+.portfolio-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.14),
+    transparent 30%,
+    rgba(168, 85, 247, 0.08) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
 .portfolio-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(157, 78, 221, 0.25);
-  border-color: rgba(157, 78, 221, 0.25);
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(157, 78, 221, 0.25);
+  border-color: rgba(157, 78, 221, 0.35);
+}
+
+.portfolio-card:hover::before {
+  opacity: 1;
 }
 
 /* Image wrapper */
@@ -57,11 +104,37 @@
   overflow: hidden;
 }
 
+.portfolio-img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 30%,
+    transparent 60%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+}
+
+.portfolio-card:hover .portfolio-img-wrapper::after {
+  transform: translateX(120%);
+}
+
+.portfolio-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 20px;
+}
+
 .portfolio-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .portfolio-card:hover .portfolio-img {
@@ -116,19 +189,17 @@
 }
 
 /* Card info section */
-.portfolio-info {
-  padding: 22px 24px 26px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-
 .portfolio-name {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: #f8fbff;
+  margin: 0;
+}
+.portfolio-desc {
+  color: rgba(203, 213, 225, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -137,6 +208,10 @@
   font-size: 0.92rem;
   line-height: 1.6;
   margin: 0;
+}
+
+.portfolio-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 /* Tech tags */

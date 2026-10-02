@@ -1,23 +1,24 @@
 import './About.css'
-import about_img from './assets/profile_photo.jpeg'
 import useScrollReveal from './hooks/useScrollReveal'
 
 const About = () => {
   const titleReveal = useScrollReveal()
   const contentReveal = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
-  const skillsReveal = useScrollReveal({ threshold: 0.1 })
-  const statsReveal = useScrollReveal()
+  const stackReveal = useScrollReveal({ threshold: 0.2 })
 
-  const skills = [
-    { name: 'HTML & CSS', desc: 'Responsive layouts, clean styling, and polished page structure.' },
-    { name: 'React JS', desc: 'Reusable components and interactive user interfaces.' },
-    { name: 'JavaScript & TypeScript', desc: 'Dynamic logic, type-safe development, and modern features for robust applications.' },
-    { name: 'Next JS', desc: 'Modern React websites with routing and production-ready structure.' },
-    { name: 'PHP', desc: 'Backend logic, form handling, and server-side website features.' },
-    { name: 'MySQL Database', desc: 'Database design, queries, and data-driven application features.' },
-    { name: 'Angular', desc: 'Component-based frontend application structures and routing with TypeScript.' },
-    { name: 'ASP.NET Core', desc: 'Developing secure, high-performance RESTful APIs using C#.' },
-    { name: 'PostgreSQL', desc: 'Relational database design, integration, and data management.' }
+  const techStack = [
+    { label: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', accent: '#ff5c4d' },
+    { label: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', accent: '#4da3ff' },
+    { label: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', accent: '#facc15' },
+    { label: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', accent: '#4a9cff' },
+    { label: 'Angular', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg', accent: '#ff3d5a' },
+    { label: 'React.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', accent: '#67d0ff' },
+    { label: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', accent: '#e2e8f0' },
+    { label: 'Tailwind CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg', accent: '#38bdf8' },
+    { label: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', accent: '#4ade80' },
+    { label: 'Express', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', accent: '#e5e7eb' },
+    { label: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', accent: '#4ade80' },
+    { label: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', accent: '#f97316' }
   ]
 
   return (
@@ -26,55 +27,98 @@ const About = () => {
         ref={titleReveal.ref}
         className={`about-title scroll-reveal ${titleReveal.isVisible ? 'revealed' : ''}`}
       >
-        About <span className="highlight">me</span>
+        About <span className="highlight">Me</span>
       </h1>
 
-      <div
-        ref={contentReveal.ref}
-        className={`about-content scroll-reveal ${contentReveal.isVisible ? 'revealed' : ''}`}
-      >
-        <img src={about_img} alt="about" className="about-img" />
+      <div className="about-layout">
+        <div
+          ref={contentReveal.ref}
+          className={`about-copy scroll-reveal ${contentReveal.isVisible ? 'revealed' : ''}`}
+        >
+          <h2>Passionate developer building the future of the web.</h2>
 
-        <div className="about-text">
           <p>
-            I am a full-stack web developer from Nigeria with 2 years of professional experience building responsive, user-friendly web applications. Throughout my journey, I have worked on diverse projects that strengthened my skills across frontend interfaces, backend logic, and database-driven features.
+            I&apos;m Shefiu Abdullahi, a full-stack developer based in Lagos, Nigeria, with a deep
+            love for creating elegant, efficient, and user-centric digital solutions. With a
+            background in both engineering and design, I bridge the gap between complex
+            functionality and intuitive user experiences.
           </p>
-          <p>
-            My expertise includes Angular, React, Next JS, TypeScript, PHP, ASP.NET Core (C#), and PostgreSQL/MySQL, giving me the ability to create polished user interfaces and connect them to robust backend systems. I bring enthusiasm and attention to detail to every project I work on.
-          </p>
-        </div>
-      </div>
 
-      <div
-        ref={skillsReveal.ref}
-        className={`skills stagger-children ${skillsReveal.isVisible ? 'revealed' : ''}`}
-      >
-        {skills.map((skill, index) => (
-          <div key={index} className="skill-item scroll-reveal-child">
-            <div className="skill-number">{String(index + 1).padStart(2, '0')}</div>
-            <h3 className="skill-name">{skill.name}</h3>
-            <p className="skill-desc">{skill.desc}</p>
+          <p>
+            My approach is centered around clean code, performance optimization, and accessibility.
+            I believe every pixel has a purpose and every line of code should contribute to a
+            seamless user experience.
+          </p>
+
+          <div
+            ref={stackReveal.ref}
+            className={`tech-stack scroll-reveal ${stackReveal.isVisible ? 'revealed' : ''}`}
+          >
+            {techStack.map((item, index) => (
+              <div key={index} className="tech-pill">
+                <span className="tech-check">✓</span>
+                <span>{item.label}</span>
+              </div>
+            ))}
           </div>
-        ))}
+
+          <div className="cta-row">
+            <button type="button" className="primary-btn" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>Get In Touch</button>
+          </div>
+        </div>
+
+        <aside className="profile-card">
+          <div className="card-inner">
+            <div className="profile-intro">
+              <div className="profile-avatar"><span>SA</span></div>
+              <div>
+                <h3>Shefiu Abdullahi</h3>
+                <p>Full-Stack Developer</p>
+              </div>
+            </div>
+
+          <div className="profile-meta">
+            <div>
+              <span>Location</span>
+              <strong>Lagos, Nigeria</strong>
+            </div>
+            <div>
+              <span>Experience</span>
+              <strong>2+ Years</strong>
+            </div>
+            <div>
+              <span>Freelance</span>
+              <strong>Available</strong>
+            </div>
+          </div>
+
+            <blockquote>
+              “Transforming ideas into digital reality through code and design.”
+            </blockquote>
+          </div>
+        </aside>
       </div>
 
-      <div
-        ref={statsReveal.ref}
-        className={`about-stats scroll-reveal-scale ${statsReveal.isVisible ? 'revealed' : ''}`}
-      >
-        <div className="stat">
-          <h3>2+</h3>
-          <p>YEARS OF EXPERIENCE</p>
-        </div>
-        <div className="divider"></div>
-        <div className="stat">
-          <h3>25+</h3>
-          <p>PROJECTS COMPLETED</p>
-        </div>
-        <div className="divider"></div>
-        <div className="stat">
-          <h3>10+</h3>
-          <p>HAPPY CLIENTS</p>
+      <div className="about-stack-section" id="skills">
+        <h2 className="about-stack-title">
+          My <span className="highlight">Stack</span>
+        </h2>
+        <p className="about-stack-subtitle">
+          The technologies and tools I use to bring digital ideas to life. I&apos;m always
+          expanding my toolkit to stay ahead of the curve.
+        </p>
+
+        <div className="about-stack-grid">
+          {techStack.map((item, index) => (
+            <div
+              key={`${item.label}-${index}`}
+              className="about-stack-card"
+              style={{ '--card-accent': item.accent }}
+            >
+              <img src={item.logo} alt={`${item.label} logo`} className="about-stack-logo" />
+              <div className="about-stack-label">{item.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
