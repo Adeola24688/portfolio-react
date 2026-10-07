@@ -1,41 +1,45 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const useScrollReveal = (options = {}) => {
   const {
     threshold = 0.15,
-    rootMargin = '0px 0px -50px 0px',
+    rootMargin = "0px 0px -50px 0px",
     triggerOnce = true,
-  } = options
+  } = options;
 
-  const ref = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
+  const nodeRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const registerNode = useCallback((node) => {
+    nodeRef.current = node;
+  }, []);
 
   useEffect(() => {
-    const element = ref.current
-    if (!element) return
+    const element = nodeRef.current;
+    if (!element) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
           if (triggerOnce) {
-            observer.unobserve(element)
+            observer.unobserve(element);
           }
         } else if (!triggerOnce) {
-          setIsVisible(false)
+          setIsVisible(false);
         }
       },
-      { threshold, rootMargin }
-    )
+      { threshold, rootMargin },
+    );
 
-    observer.observe(element)
+    observer.observe(element);
 
     return () => {
-      observer.unobserve(element)
-    }
-  }, [threshold, rootMargin, triggerOnce])
+      observer.unobserve(element);
+    };
+  }, [threshold, rootMargin, triggerOnce]);
 
-  return { ref, isVisible }
-}
+  return { registerNode, isVisible };
+};
 
-export default useScrollReveal
+export default useScrollReveal;

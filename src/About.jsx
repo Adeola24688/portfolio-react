@@ -2,9 +2,9 @@ import './About.css'
 import useScrollReveal from './hooks/useScrollReveal'
 
 const About = () => {
-  const titleReveal = useScrollReveal()
-  const contentReveal = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
-  const stackReveal = useScrollReveal({ threshold: 0.2 })
+  const { registerNode: titleNode, isVisible: titleVisible } = useScrollReveal()
+  const { registerNode: contentNode, isVisible: contentVisible } = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
+  const { registerNode: stackNode, isVisible: stackVisible } = useScrollReveal({ threshold: 0.2 })
 
   const techStack = [
     { label: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', accent: '#ff5c4d' },
@@ -24,16 +24,16 @@ const About = () => {
   return (
     <section className="about" id="about">
       <h1
-        ref={titleReveal.ref}
-        className={`about-title scroll-reveal ${titleReveal.isVisible ? 'revealed' : ''}`}
+        ref={titleNode}
+        className={`about-title scroll-reveal ${titleVisible ? 'revealed' : ''}`}
       >
         About <span className="highlight">Me</span>
       </h1>
 
       <div className="about-layout">
         <div
-          ref={contentReveal.ref}
-          className={`about-copy scroll-reveal ${contentReveal.isVisible ? 'revealed' : ''}`}
+          ref={contentNode}
+          className={`about-copy scroll-reveal ${contentVisible ? 'revealed' : ''}`}
         >
           <h2>Passionate developer building the future of the web.</h2>
 
@@ -51,8 +51,8 @@ const About = () => {
           </p>
 
           <div
-            ref={stackReveal.ref}
-            className={`tech-stack scroll-reveal ${stackReveal.isVisible ? 'revealed' : ''}`}
+            ref={stackNode}
+            className={`tech-stack scroll-reveal ${stackVisible ? 'revealed' : ''}`}
           >
             {techStack.map((item, index) => (
               <div key={index} className="tech-pill">
@@ -84,7 +84,7 @@ const About = () => {
             </div>
             <div>
               <span>Experience</span>
-              <strong>2+ Years</strong>
+              <strong>3+ Years</strong>
             </div>
             <div>
               <span>Freelance</span>

@@ -3,21 +3,21 @@ import mywork_data from './assets/mywork_data'
 import useScrollReveal from './hooks/useScrollReveal'
 
 const Portfolio = () => {
-  const titleReveal = useScrollReveal()
-  const gridReveal = useScrollReveal({ threshold: 0.08 })
+  const { registerNode: titleNode, isVisible: titleVisible } = useScrollReveal()
+  const { registerNode: gridNode, isVisible: gridVisible } = useScrollReveal({ threshold: 0.08 })
 
   return (
     <section className="portfolio" id="portfolio">
       <h1
-        ref={titleReveal.ref}
-        className={`portfolio-title scroll-reveal ${titleReveal.isVisible ? 'revealed' : ''}`}
+        ref={titleNode}
+        className={`portfolio-title scroll-reveal ${titleVisible ? 'revealed' : ''}`}
       >
         My latest <span className="highlight">work</span>
       </h1>
 
       <div
-        ref={gridReveal.ref}
-        className={`portfolio-grid stagger-children ${gridReveal.isVisible ? 'revealed' : ''}`}
+        ref={gridNode}
+        className={`portfolio-grid stagger-children ${gridVisible ? 'revealed' : ''}`}
       >
         {mywork_data.map((work, index) => (
           <div key={index} className="portfolio-card scroll-reveal-child">

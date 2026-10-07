@@ -13,9 +13,9 @@ const Contact = () => {
   })
   const [result, setResult] = useState('')
 
-  const titleReveal = useScrollReveal()
-  const leftReveal = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
-  const formReveal = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
+  const { registerNode: titleNode, isVisible: titleVisible } = useScrollReveal()
+  const { registerNode: leftNode, isVisible: leftVisible } = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
+  const { registerNode: formNode, isVisible: formVisible } = useScrollReveal({ rootMargin: '0px 0px -30px 0px' })
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -49,16 +49,16 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <h1
-        ref={titleReveal.ref}
-        className={`contact-title scroll-reveal ${titleReveal.isVisible ? 'revealed' : ''}`}
+        ref={titleNode}
+        className={`contact-title scroll-reveal ${titleVisible ? 'revealed' : ''}`}
       >
         Get in <span className="highlight">touch</span>
       </h1>
 
       <div className="contact-container">
         <div
-          ref={leftReveal.ref}
-          className={`contact-left scroll-reveal-left ${leftReveal.isVisible ? 'revealed' : ''}`}
+          ref={leftNode}
+          className={`contact-left scroll-reveal-left ${leftVisible ? 'revealed' : ''}`}
         >
           <h2>Let's <span className="gradient-text">talk</span></h2>
           <p>
@@ -82,8 +82,8 @@ const Contact = () => {
         </div>
 
         <form
-          ref={formReveal.ref}
-          className={`contact-form scroll-reveal-right ${formReveal.isVisible ? 'revealed' : ''}`}
+          ref={formNode}
+          className={`contact-form scroll-reveal-right ${formVisible ? 'revealed' : ''}`}
           onSubmit={onSubmit}
         >
           <div className="form-group">
