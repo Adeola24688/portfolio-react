@@ -11,6 +11,7 @@ const About = () => {
     { label: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', accent: '#4da3ff' },
     { label: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', accent: '#facc15' },
     { label: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', accent: '#4a9cff' },
+    { label: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', accent: '#facc15' },
     { label: 'Angular', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg', accent: '#ff3d5a' },
     { label: 'React.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', accent: '#67d0ff' },
     { label: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', accent: '#e2e8f0' },
@@ -18,9 +19,10 @@ const About = () => {
     { label: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', accent: '#4ade80' },
     { label: 'Express', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', accent: '#e5e7eb' },
     { label: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', accent: '#4ade80' },
+    { label: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', accent: '#60a5fa' },
+    { label: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', accent: '#fbbf24' },
     { label: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', accent: '#f97316' }
   ]
-
   return (
     <section className="about" id="about">
       <h1
@@ -38,10 +40,9 @@ const About = () => {
           <h2>Passionate developer building the future of the web.</h2>
 
           <p>
-            I&apos;m Shefiu Abdullahi, a full-stack developer based in Lagos, Nigeria, with a deep
-            love for creating elegant, efficient, and user-centric digital solutions. With a
-            background in both engineering and design, I bridge the gap between complex
-            functionality and intuitive user experiences.
+            I&apos;m Shefiu Abdullahi, a Full-Stack Developer with a deep love for creating elegant,
+            efficient, and user-centric digital solutions. With a background in both engineering
+            and design, I bridge the gap between complex functionality and intuitive user interfaces.
           </p>
 
           <p>
@@ -54,8 +55,8 @@ const About = () => {
             ref={stackNode}
             className={`tech-stack scroll-reveal ${stackVisible ? 'revealed' : ''}`}
           >
-            {techStack.map((item, index) => (
-              <div key={index} className="tech-pill">
+            {techStack.map((item) => (
+              <div key={item.label} className="tech-pill">
                 <span className="tech-check">✓</span>
                 <span>{item.label}</span>
               </div>
@@ -71,8 +72,8 @@ const About = () => {
           <div className="card-inner">
             <div className="profile-intro">
               <div className="profile-avatar"><span>SA</span></div>
-              <div>
-                <h3>Shefiu Abdullahi</h3>
+              <div className="profile-name-wrap">
+                <h3 className="profile-name">Shefiu Abdullahi</h3>
                 <p>Full-Stack Developer</p>
               </div>
             </div>
@@ -104,8 +105,8 @@ const About = () => {
           My <span className="highlight">Stack</span>
         </h2>
         <p className="about-stack-subtitle">
-          The technologies and tools I use to bring digital ideas to life. I&apos;m always
-          expanding my toolkit to stay ahead of the curve.
+          The technologies and tools I use to bring digital ideas to life. I&apos;m always expanding
+          my toolkit to stay ahead of the curve.
         </p>
 
         <div className="about-stack-grid">

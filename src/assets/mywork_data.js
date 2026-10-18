@@ -13,7 +13,7 @@ const mywork_data = [
       "Restaurant website showcasing menu, story, and contact information.",
     w_img: screenshot_salt_and_suya,
     w_url: "https://salt-and-suya-ten.vercel.app/",
-    w_tags: ["React", "HTML", "CSS", "JavaScript"],
+    w_tags: ["React", "HTML", "CSS", "JavaScript", "Vercel"],
   },
   {
     w_no: 2,
@@ -22,25 +22,34 @@ const mywork_data = [
       "A responsive freelancer portfolio and services website featuring modern animations and a polished user experience.",
     w_img: screenshot_freelancer,
     w_url: "https://freelancer-mocha-beta.vercel.app/",
-    w_tags: ["React", "CSS", "JavaScript"],
+    w_tags: ["HTML", "CSS", "JavaScript", "Vercel"],
   },
   {
     w_no: 3,
     w_name: "Polytechnic Portal",
     w_desc:
-      "A school portal login experience for student account access, registration guidance, and course registration.",
+      "A student portal with sign-in and registration flows, built with Angular and Bootstrap and connected to an ASP.NET Core REST API.",
     w_img: screenshot_polytechnic_portal,
     w_url: "https://polytechnicport.netlify.app/",
-    w_tags: ["Angular", "TypeScript", "CSS", "Netlify"],
+    w_tags: [
+      "Angular",
+      "TypeScript",
+      "Bootstrap",
+      "CSS",
+      "ASP.NET Core",
+      "REST API",
+      "Netlify",
+      "Render",
+    ],
   },
   {
     w_no: 4,
     w_name: "Crypto Place",
     w_desc:
-      "A cryptocurrency tracking dashboard displaying real-time prices, market data, and interactive charts.",
+      "A cryptocurrency dashboard for exploring live prices and market data from the CoinGecko API.",
     w_img: screenshot_crypto,
     w_url: "https://abdullahcryptoplace.vercel.app/",
-    w_tags: ["React", "API", "CSS", "JavaScript"],
+    w_tags: ["React", "CoinGecko API", "CSS", "JavaScript", "Vercel"],
   },
   {
     w_no: 5,
@@ -49,16 +58,16 @@ const mywork_data = [
       "A YouTube-inspired video browsing app with search, categories, and responsive video player using the YouTube Data API.",
     w_img: screenshot_youtube,
     w_url: "https://abdullah-youtube-clone.vercel.app/",
-    w_tags: ["React", "YouTube API", "CSS"],
+    w_tags: ["React", "YouTube Data API", "CSS", "Vercel"],
   },
   {
     w_no: 6,
     w_name: "Movie App",
     w_desc:
-      "A movie streaming interface with categories, trailers, and a sleek dark UI powered by TMDB API.",
+      "A movie discovery app with categories and trailers, using TMDB for movie data and Firebase services.",
     w_img: screenshot_movie_app,
     w_url: "https://movie-theta-jade.vercel.app/login",
-    w_tags: ["React", "TMDB API", "CSS"],
+    w_tags: ["React", "TMDB API", "Firebase", "CSS", "Vercel"],
   },
 ];
 

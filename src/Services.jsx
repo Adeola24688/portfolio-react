@@ -6,12 +6,12 @@ const Services = () => {
   const { registerNode: gridNode, isVisible: gridVisible } = useScrollReveal({ threshold: 0.1 })
 
   const items = [
-    { id: 1, number: '01', title: 'Frontend Development', desc: 'Responsive interfaces built with HTML, CSS, JavaScript, TypeScript, React, Next.js, Angular, and Tailwind CSS.'},
-    { id: 2, number: '02', title: 'Backend Development', desc: 'Scalable APIs and server logic using Node.js, Express, and additional experience in PHP and ASP.NET Core.'},
-    { id: 3, number: '03', title: 'Database Management', desc: 'Database design, queries, and integration using MongoDB, MySQL, PostgreSQL, and modern backend patterns.'},
-    { id: 4, number: '04', title: 'Full-Stack Websites', desc: 'Complete web applications that connect modern user interfaces to reliable backend systems.'},
-    { id: 5, number: '05', title: 'Portfolio Websites', desc: 'Clean personal and business websites designed to present work, skills, and services clearly.'},
-    { id: 6, number: '06', title: 'Website Maintenance', desc: 'Updates, fixes, performance improvements, and ongoing support for existing websites.'}
+    { id: 1, number: '01', title: 'Frontend Development', desc: 'Create responsive, accessible interfaces with React and TypeScript, from reusable components to the details users notice.'},
+    { id: 2, number: '02', title: 'Backend & API Development', desc: 'Build Python-powered APIs and integrate AWS services to connect application features with reliable data.'},
+    { id: 3, number: '03', title: 'Database Management', desc: 'Structure and work with PostgreSQL data so application information stays organized and easy to use.'},
+    { id: 4, number: '04', title: 'Full-Stack Development', desc: 'Bring frontend, backend, data, and cloud services together in a complete web application.'},
+    { id: 5, number: '05', title: 'Project Planning', desc: 'Shape an early idea into a practical plan, break down the work, and keep progress moving toward release.'},
+    { id: 6, number: '06', title: 'Website Maintenance', desc: 'Keep existing websites working well with updates, bug fixes, performance improvements, and ongoing care.'}
   ]
 
   return (
@@ -35,6 +35,7 @@ const Services = () => {
           </article>
         ))}
       </div>
+      <p className="services-note">Additional services available on request.</p>
     </section>
   )
 }
