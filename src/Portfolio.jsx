@@ -55,6 +55,20 @@ const Portfolio = () => {
                   ))}
                 </div>
               )}
+              {work.w_url && (
+                <a
+                  href={work.w_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="portfolio-project-link"
+                  aria-label={`Open ${work.w_name} live project`}
+                >
+                  View live project
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7M7 7h10v10" />
+                  </svg>
+                </a>
+              )}
             </div>
           </div>
         ))}

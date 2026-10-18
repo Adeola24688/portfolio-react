@@ -1,4 +1,3 @@
-import screenshot_salt_and_suya from "../assets/screenshot_salt_and_suya.svg";
 import screenshot_freelancer from "../assets/screenshot_freelancer.png";
 import screenshot_polytechnic_portal from "../assets/screenshot_polytechnic_portal.svg";
 import screenshot_crypto from "../assets/screenshot_crypto.png";
@@ -8,10 +7,11 @@ import screenshot_movie_app from "../assets/screenshot_movie_app.svg";
 const mywork_data = [
   {
     w_no: 1,
-    w_name: "Salt & Suya",
+    w_name: "Fieldwork Studio",
     w_desc:
-      "Restaurant website showcasing menu, story, and contact information.",
-    w_img: screenshot_salt_and_suya,
+      "Architecture and interiors studio website showcasing selected projects, the practice, and its design approach across West Africa.",
+    w_img:
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=88",
     w_url: "https://salt-and-suya-ten.vercel.app/",
     w_tags: ["React", "HTML", "CSS", "JavaScript", "Vercel"],
   },
